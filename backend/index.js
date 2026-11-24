@@ -1,11 +1,12 @@
-const express = require('express');
-const app = express();
-const port = 3000;
+const app = require('./src/app');
 
-app.get('/', (req, res) => {
-  res.send('Halo, Express jalan!');
-});
+const PORT = process.env.PORT || 5000;
 
-app.listen(port, () => {
-  console.log(`Server jalan di http://localhost:${port}`);
-});
+// Listen hanya saat dijalankan langsung (bukan di serverless Vercel)
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Barberly API berjalan di http://localhost:${PORT}/api/v1`);
+  });
+}
+
+module.exports = app;
