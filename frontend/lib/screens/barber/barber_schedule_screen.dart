@@ -112,7 +112,7 @@ class _BarberScheduleScreenState extends State<BarberScheduleScreen> {
                   const Icon(
                     Icons.calendar_today_outlined,
                     size: 18,
-                    color: AppColors.navy,
+                    color: AppColors.textPrimary,
                   ),
                   const SizedBox(width: 10),
                   Expanded(

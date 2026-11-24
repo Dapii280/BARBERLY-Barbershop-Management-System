@@ -128,7 +128,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           width: 28,
                           height: 28,
                           decoration: BoxDecoration(
-                            color: AppColors.navy,
+                            color: AppColors.textPrimary,
                             shape: BoxShape.circle,
                             border: Border.all(
                               color: AppColors.white,
@@ -339,7 +339,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         style: const TextStyle(
           fontSize: 30,
           fontWeight: FontWeight.w700,
-          color: AppColors.navy,
+          color: AppColors.textPrimary,
         ),
       ),
     );
@@ -370,7 +370,7 @@ class _LanguageTile extends StatelessWidget {
           color: selected ? AppColors.surface : AppColors.white,
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
-            color: selected ? AppColors.navy : AppColors.border,
+            color: selected ? AppColors.textPrimary : AppColors.border,
           ),
         ),
         child: Row(
@@ -407,7 +407,7 @@ class _LanguageTile extends StatelessWidget {
             Icon(
               selected ? Icons.check_circle : Icons.radio_button_unchecked,
               size: 18,
-              color: selected ? AppColors.navy : AppColors.textMuted,
+              color: selected ? AppColors.textPrimary : AppColors.textMuted,
             ),
           ],
         ),

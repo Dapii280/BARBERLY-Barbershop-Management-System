@@ -5,12 +5,12 @@ class AppColors {
 
   static const Color white = Color(0xFFFFFFFF);
   static const Color surface = Color(0xFFF8F9FA);
-  static const Color border = Color(0xFFE5E7EB);
-  static const Color textPrimary = Color(0xFF111827);
-  static const Color textSecondary = Color(0xFF4B5563);
-  static const Color textMuted = Color(0xFF9CA3AF);
-  static const Color navy = Color(0xFF1E293B);
-  static const Color amber = Color(0xFFB45309);
+  static const Color border = Color(0xFFE2E5E9);
+  static const Color textPrimary = Color(0xFF111214);
+  static const Color textSecondary = Color(0xFF64748B);
+  static const Color textMuted = Color(0xFF6B7280);
+  static const Color amber = Color(0xFFD97706);
+  static const Color amberBg = Color(0xFFFFFBEB);
   static const Color success = Color(0xFF15803D);
   static const Color successBg = Color(0xFFF0FDF4);
   static const Color danger = Color(0xFFB91C1C);
@@ -22,17 +22,17 @@ class AppColors {
 class AppTheme {
   AppTheme._();
 
-  static const double radius = 14;
+  static const double radius = 10;
 
   static ThemeData get light {
     final base = ThemeData(useMaterial3: true, brightness: Brightness.light);
     final scheme = ColorScheme.fromSeed(
-      seedColor: AppColors.navy,
+      seedColor: AppColors.amber,
       brightness: Brightness.light,
     ).copyWith(
-      primary: AppColors.navy,
+      primary: AppColors.amber,
       onPrimary: AppColors.white,
-      secondary: AppColors.amber,
+      secondary: AppColors.textPrimary,
       onSecondary: AppColors.white,
       surface: AppColors.white,
       onSurface: AppColors.textPrimary,
@@ -41,9 +41,9 @@ class AppTheme {
 
     return base.copyWith(
       colorScheme: scheme,
-      scaffoldBackgroundColor: AppColors.white,
-      splashColor: AppColors.navy.withValues(alpha: 0.04),
-      highlightColor: AppColors.navy.withValues(alpha: 0.02),
+      scaffoldBackgroundColor: AppColors.surface,
+      splashColor: AppColors.textPrimary.withValues(alpha: 0.04),
+      highlightColor: AppColors.textPrimary.withValues(alpha: 0.02),
       textTheme: base.textTheme
           .apply(bodyColor: AppColors.textPrimary, displayColor: AppColors.textPrimary)
           .copyWith(
@@ -116,42 +116,42 @@ class AppTheme {
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: AppColors.surface,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        fillColor: AppColors.white,
+        contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
         hintStyle: const TextStyle(fontSize: 14, color: AppColors.textMuted),
         labelStyle: const TextStyle(fontSize: 14, color: AppColors.textSecondary),
         floatingLabelStyle: const TextStyle(
           fontSize: 13,
           fontWeight: FontWeight.w600,
-          color: AppColors.navy,
+          color: AppColors.textPrimary,
         ),
-        prefixIconColor: const Color(0xFF6B7280),
-        suffixIconColor: const Color(0xFF6B7280),
+        prefixIconColor: AppColors.textSecondary,
+        suffixIconColor: AppColors.textSecondary,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(10),
           borderSide: const BorderSide(color: AppColors.border),
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(10),
           borderSide: const BorderSide(color: AppColors.border),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: AppColors.navy, width: 1.4),
+          borderRadius: BorderRadius.circular(10),
+          borderSide: const BorderSide(color: AppColors.textPrimary, width: 1.5),
         ),
         errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(10),
           borderSide: const BorderSide(color: AppColors.danger),
         ),
         focusedErrorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: AppColors.danger, width: 1.4),
+          borderRadius: BorderRadius.circular(10),
+          borderSide: const BorderSide(color: AppColors.danger, width: 1.5),
         ),
         errorStyle: const TextStyle(fontSize: 12, color: AppColors.danger),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: AppColors.navy,
+          backgroundColor: AppColors.amber,
           foregroundColor: AppColors.white,
           disabledBackgroundColor: const Color(0xFFCBD5E1),
           disabledForegroundColor: AppColors.white,
@@ -159,17 +159,17 @@ class AppTheme {
           shadowColor: Colors.transparent,
           minimumSize: const Size(0, 52),
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           textStyle: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
         ),
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
-          foregroundColor: AppColors.navy,
+          foregroundColor: AppColors.textPrimary,
           minimumSize: const Size(0, 48),
           padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
           side: const BorderSide(color: AppColors.border),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           textStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
         ),
       ),
@@ -182,7 +182,7 @@ class AppTheme {
       ),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         backgroundColor: AppColors.white,
-        selectedItemColor: AppColors.navy,
+        selectedItemColor: AppColors.amber,
         unselectedItemColor: AppColors.textMuted,
         type: BottomNavigationBarType.fixed,
         showUnselectedLabels: true,
@@ -198,7 +198,7 @@ class AppTheme {
       dialogTheme: DialogThemeData(
         backgroundColor: AppColors.white,
         surfaceTintColor: Colors.transparent,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         titleTextStyle: const TextStyle(
           fontSize: 17,
           fontWeight: FontWeight.w700,
@@ -214,15 +214,15 @@ class AppTheme {
         backgroundColor: AppColors.white,
         surfaceTintColor: Colors.transparent,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(22)),
+          borderRadius: BorderRadius.vertical(top: Radius.circular(10)),
         ),
         showDragHandle: true,
       ),
       snackBarTheme: SnackBarThemeData(
-        backgroundColor: AppColors.navy,
+        backgroundColor: AppColors.textPrimary,
         contentTextStyle: const TextStyle(fontSize: 13, color: AppColors.white),
         behavior: SnackBarBehavior.floating,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         insetPadding: const EdgeInsets.all(16),
       ),
       progressIndicatorTheme: const ProgressIndicatorThemeData(
@@ -233,7 +233,7 @@ class AppTheme {
         thumbColor: const WidgetStatePropertyAll(AppColors.white),
         trackColor: WidgetStateProperty.resolveWith(
           (states) => states.contains(WidgetState.selected)
-              ? AppColors.navy
+              ? AppColors.textPrimary
               : const Color(0xFFD1D5DB),
         ),
         trackOutlineColor: const WidgetStatePropertyAll(Colors.transparent),
@@ -250,7 +250,7 @@ class AppTheme {
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
       ),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
-        backgroundColor: AppColors.navy,
+        backgroundColor: AppColors.textPrimary,
         foregroundColor: AppColors.white,
         elevation: 0,
       ),

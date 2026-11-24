@@ -25,7 +25,7 @@ class ServiceDetailScreen extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(20, 8, 20, 24),
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(10),
             child: SizedBox(
               height: 210,
               width: double.infinity,
@@ -109,7 +109,7 @@ class ServiceDetailScreen extends StatelessWidget {
                     const Icon(
                       Icons.schedule,
                       size: 15,
-                      color: AppColors.navy,
+                      color: AppColors.textPrimary,
                     ),
                     const SizedBox(width: 6),
                     Text(

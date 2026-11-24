@@ -31,25 +31,25 @@ class _SplashScreenState extends State<SplashScreen> {
             mainAxisSize: MainAxisSize.min,
             children: [
               Container(
-                width: 84,
-                height: 84,
+                width: 64,
+                height: 64,
                 decoration: BoxDecoration(
-                  color: AppColors.navy,
-                  borderRadius: BorderRadius.circular(24),
+                  color: AppColors.textPrimary,
+                  borderRadius: BorderRadius.circular(10),
                 ),
                 child: const Icon(
                   Icons.content_cut,
                   color: AppColors.white,
-                  size: 38,
+                  size: 28,
                 ),
               ),
-              const SizedBox(height: 24),
-              Text(
-                context.tr('app_name'),
-                style: const TextStyle(
-                  fontSize: 32,
-                  fontWeight: FontWeight.w700,
-                  letterSpacing: -1,
+              const SizedBox(height: 22),
+              const Text(
+                'BARBERLY',
+                style: TextStyle(
+                  fontSize: 26,
+                  fontWeight: FontWeight.w800,
+                  letterSpacing: 3,
                   color: AppColors.textPrimary,
                 ),
               ),

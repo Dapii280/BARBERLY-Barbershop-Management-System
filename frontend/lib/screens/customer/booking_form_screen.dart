@@ -192,7 +192,7 @@ class _BookingFormScreenState extends State<BookingFormScreen> {
                                   barber.initial,
                                   style: const TextStyle(
                                     fontWeight: FontWeight.w700,
-                                    color: AppColors.navy,
+                                    color: AppColors.textPrimary,
                                   ),
                                 ),
                               )
@@ -205,7 +205,7 @@ class _BookingFormScreenState extends State<BookingFormScreen> {
                         overflow: TextOverflow.ellipsis,
                       ),
                       trailing: isSelected
-                          ? const Icon(Icons.check_circle, color: AppColors.navy)
+                          ? const Icon(Icons.check_circle, color: AppColors.amber)
                           : null,
                     );
                   },
@@ -367,7 +367,7 @@ class _BookingFormScreenState extends State<BookingFormScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
             child: Row(
               children: [
-                const Icon(Icons.calendar_today_outlined, size: 18, color: AppColors.navy),
+                const Icon(Icons.calendar_today_outlined, size: 18, color: AppColors.textPrimary),
                 const SizedBox(width: 10),
                 Expanded(
                   child: Text(
@@ -454,7 +454,7 @@ class _BookingFormScreenState extends State<BookingFormScreen> {
       return Center(
         child: Text(
           barber.initial,
-          style: const TextStyle(fontWeight: FontWeight.w700, color: AppColors.navy),
+          style: const TextStyle(fontWeight: FontWeight.w700, color: AppColors.textPrimary),
         ),
       );
     }
@@ -512,10 +512,10 @@ class _BookingFormScreenState extends State<BookingFormScreen> {
           selected: isSelected,
           showCheckmark: false,
           onSelected: (_) => setState(() => _selectedTime = slot),
-          selectedColor: AppColors.navy,
+          selectedColor: AppColors.amber,
           backgroundColor: AppColors.white,
           side: BorderSide(
-            color: isSelected ? AppColors.navy : AppColors.border,
+            color: isSelected ? AppColors.amber : AppColors.border,
           ),
           labelStyle: TextStyle(
             fontSize: 12,

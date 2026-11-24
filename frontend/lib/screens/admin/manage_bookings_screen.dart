@@ -90,7 +90,7 @@ class _ManageBookingsScreenState extends State<ManageBookingsScreen> {
                       contentPadding: EdgeInsets.zero,
                       title: Text(sheetContext.tr('all_barbers')),
                       trailing: _barberId == null
-                          ? const Icon(Icons.check, color: AppColors.navy)
+                          ? const Icon(Icons.check, color: AppColors.textPrimary)
                           : null,
                       onTap: () => Navigator.of(sheetContext).pop(-1),
                     ),
@@ -100,7 +100,7 @@ class _ManageBookingsScreenState extends State<ManageBookingsScreen> {
                         title: Text(barber.name),
                         subtitle: Text(barber.specialty ?? barber.email),
                         trailing: _barberId == barber.id
-                            ? const Icon(Icons.check, color: AppColors.navy)
+                            ? const Icon(Icons.check, color: AppColors.textPrimary)
                             : null,
                         onTap: () => Navigator.of(sheetContext).pop(barber.id),
                       ),
@@ -218,7 +218,7 @@ class _ManageBookingsScreenState extends State<ManageBookingsScreen> {
                         const Icon(
                           Icons.calendar_today_outlined,
                           size: 15,
-                          color: AppColors.navy,
+                          color: AppColors.textPrimary,
                         ),
                         const SizedBox(width: 8),
                         Expanded(
@@ -257,7 +257,7 @@ class _ManageBookingsScreenState extends State<ManageBookingsScreen> {
                         const Icon(
                           Icons.person_outline,
                           size: 15,
-                          color: AppColors.navy,
+                          color: AppColors.textPrimary,
                         ),
                         const SizedBox(width: 8),
                         Expanded(
@@ -414,9 +414,9 @@ class _ManageBookingsScreenState extends State<ManageBookingsScreen> {
       selected: selected,
       showCheckmark: false,
       onSelected: (_) => onTap(),
-      selectedColor: AppColors.navy,
+      selectedColor: AppColors.textPrimary,
       backgroundColor: AppColors.white,
-      side: BorderSide(color: selected ? AppColors.navy : AppColors.border),
+      side: BorderSide(color: selected ? AppColors.textPrimary : AppColors.border),
       labelStyle: TextStyle(
         fontSize: 11,
         fontWeight: FontWeight.w600,

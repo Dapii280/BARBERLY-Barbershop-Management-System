@@ -29,14 +29,14 @@ class ServiceCard extends StatelessWidget {
       color: Colors.transparent,
       child: InkWell(
         onTap: onTap,
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(10),
         child: Container(
           padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(
-            color: AppColors.white,
-            borderRadius: BorderRadius.circular(14),
+            color: selected ? AppColors.amberBg : AppColors.white,
+            borderRadius: BorderRadius.circular(10),
             border: Border.all(
-              color: selected ? AppColors.navy : AppColors.border,
+              color: selected ? AppColors.amber : AppColors.border,
               width: selected ? 1.5 : 1,
             ),
           ),
@@ -127,7 +127,7 @@ class ServiceCard extends StatelessWidget {
                         ? Icons.check_circle
                         : Icons.radio_button_unchecked,
                     size: 20,
-                    color: selected ? AppColors.navy : AppColors.textMuted,
+                    color: selected ? AppColors.textPrimary : AppColors.textMuted,
                   ),
                 ),
               ],

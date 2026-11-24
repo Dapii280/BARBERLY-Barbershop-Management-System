@@ -14,17 +14,18 @@ class StatusBadge extends StatelessWidget {
     final (background, foreground) = _colors();
 
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
         color: background,
-        borderRadius: BorderRadius.circular(999),
-        border: Border.all(color: foreground.withValues(alpha: 0.18)),
+        borderRadius: BorderRadius.circular(6),
+        border: Border.all(color: foreground.withValues(alpha: 0.2)),
       ),
       child: Text(
         context.tr(payment ? 'payment_status_$status' : 'status_$status'),
         style: TextStyle(
           fontSize: 11,
           fontWeight: FontWeight.w600,
+          letterSpacing: 0.1,
           color: foreground,
         ),
       ),
@@ -57,7 +58,7 @@ class RoleBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final foreground = switch (role) {
-      'admin' => AppColors.navy,
+      'admin' => AppColors.textPrimary,
       'barber' => AppColors.amber,
       _ => AppColors.textSecondary,
     };

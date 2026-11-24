@@ -352,9 +352,9 @@ class _StatCard extends StatelessWidget {
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
-              fontSize: value.length > 10 ? 16 : 20,
-              fontWeight: FontWeight.w700,
-              letterSpacing: -0.4,
+              fontSize: value.length > 10 ? 17 : 24,
+              fontWeight: FontWeight.w800,
+              letterSpacing: -0.6,
               color: highlight ? AppColors.amber : AppColors.textPrimary,
             ),
           ),
@@ -430,7 +430,7 @@ class _QuickAction extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
               border: Border.all(color: AppColors.border),
             ),
-            child: Icon(icon, size: 17, color: AppColors.navy),
+            child: Icon(icon, size: 17, color: AppColors.textPrimary),
           ),
           const SizedBox(width: 10),
           Expanded(
@@ -467,7 +467,7 @@ class _TopServiceRow extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
             border: Border.all(color: AppColors.border),
           ),
-          child: const Icon(Icons.content_cut, size: 14, color: AppColors.navy),
+          child: const Icon(Icons.content_cut, size: 14, color: AppColors.textPrimary),
         ),
         const SizedBox(width: 10),
         Expanded(

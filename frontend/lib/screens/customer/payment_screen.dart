@@ -206,7 +206,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
               color: AppColors.surface,
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(10),
               border: Border.all(color: AppColors.border),
             ),
             child: Row(
@@ -258,15 +258,15 @@ class _MethodOption extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(12),
+      borderRadius: BorderRadius.circular(10),
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
         decoration: BoxDecoration(
-          color: selected ? AppColors.navy.withValues(alpha: 0.06) : AppColors.white,
-          borderRadius: BorderRadius.circular(12),
+          color: selected ? AppColors.amberBg : AppColors.white,
+          borderRadius: BorderRadius.circular(10),
           border: Border.all(
-            color: selected ? AppColors.navy : AppColors.border,
-            width: selected ? 1.4 : 1,
+            color: selected ? AppColors.amber : AppColors.border,
+            width: selected ? 1.5 : 1,
           ),
         ),
         child: Row(
@@ -275,7 +275,7 @@ class _MethodOption extends StatelessWidget {
             Icon(
               icon,
               size: 18,
-              color: selected ? AppColors.navy : AppColors.textSecondary,
+              color: selected ? AppColors.amber : AppColors.textSecondary,
             ),
             const SizedBox(width: 8),
             Flexible(
@@ -286,7 +286,7 @@ class _MethodOption extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w600,
-                  color: selected ? AppColors.navy : AppColors.textPrimary,
+                  color: selected ? AppColors.textPrimary : AppColors.textPrimary,
                 ),
               ),
             ),

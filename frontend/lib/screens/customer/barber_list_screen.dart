@@ -107,7 +107,7 @@ class _BarberListScreenState extends State<BarberListScreen> {
                                   style: const TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.w700,
-                                    color: AppColors.navy,
+                                    color: AppColors.textPrimary,
                                   ),
                                 ),
                               )

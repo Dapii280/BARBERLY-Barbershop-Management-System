@@ -26,29 +26,29 @@ class AppButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final isFilled = variant == AppButtonVariant.primary || variant == AppButtonVariant.danger;
     final background = switch (variant) {
-      AppButtonVariant.primary => AppColors.navy,
+      AppButtonVariant.primary => AppColors.amber,
       AppButtonVariant.danger => AppColors.danger,
-      AppButtonVariant.secondary => AppColors.surface,
+      AppButtonVariant.secondary => AppColors.white,
       AppButtonVariant.outline => Colors.transparent,
     };
-    final foreground = isFilled ? Colors.white : AppColors.navy;
+    final foreground = isFilled ? Colors.white : AppColors.textPrimary;
 
     return SizedBox(
       width: expand ? double.infinity : null,
-      height: 50,
+      height: 48,
       child: ElevatedButton(
         onPressed: loading ? null : onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: background,
           foregroundColor: foreground,
-          disabledBackgroundColor: isFilled ? const Color(0xFFCBD5E1) : AppColors.surface,
-          disabledForegroundColor: isFilled ? Colors.white : AppColors.textMuted,
+          disabledBackgroundColor: isFilled ? const Color(0xFFE2E5E9) : AppColors.surface,
+          disabledForegroundColor: isFilled ? AppColors.textMuted : AppColors.textMuted,
           elevation: 0,
           shadowColor: Colors.transparent,
-          minimumSize: const Size(0, 50),
+          minimumSize: const Size(0, 48),
           padding: const EdgeInsets.symmetric(horizontal: 18),
           side: isFilled ? BorderSide.none : const BorderSide(color: AppColors.border),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           textStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
         ),
         child: loading

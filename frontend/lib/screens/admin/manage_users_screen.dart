@@ -177,7 +177,7 @@ class _UserCard extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w700,
-                      color: AppColors.navy,
+                      color: AppColors.textPrimary,
                     ),
                   ),
                 ),

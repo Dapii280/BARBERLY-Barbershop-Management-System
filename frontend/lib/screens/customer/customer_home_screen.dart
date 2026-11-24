@@ -207,10 +207,11 @@ class _CustomerHomeScreenState extends State<CustomerHomeScreen> {
 
   Widget _promoCard(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: AppColors.navy,
-        borderRadius: BorderRadius.circular(18),
+        color: AppColors.white,
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: AppColors.border),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -218,29 +219,31 @@ class _CustomerHomeScreenState extends State<CustomerHomeScreen> {
           Text(
             context.tr('promo_title'),
             style: const TextStyle(
-              fontSize: 20,
+              fontSize: 18,
               fontWeight: FontWeight.w700,
-              color: AppColors.white,
+              letterSpacing: -0.3,
+              color: AppColors.textPrimary,
             ),
           ),
           const SizedBox(height: 6),
           Text(
             context.tr('promo_desc'),
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 13,
               height: 1.5,
-              color: AppColors.white.withValues(alpha: 0.75),
+              color: AppColors.textSecondary,
             ),
           ),
-          const SizedBox(height: 18),
+          const SizedBox(height: 16),
           SizedBox(
             height: 44,
             child: ElevatedButton.icon(
               onPressed: () => _openBooking(),
               style: ElevatedButton.styleFrom(
-                backgroundColor: AppColors.white,
-                foregroundColor: AppColors.navy,
+                backgroundColor: AppColors.amber,
+                foregroundColor: AppColors.white,
                 elevation: 0,
+                shadowColor: Colors.transparent,
                 minimumSize: const Size(0, 44),
                 padding: const EdgeInsets.symmetric(horizontal: 18),
                 shape: RoundedRectangleBorder(
@@ -279,7 +282,7 @@ class _CustomerHomeScreenState extends State<CustomerHomeScreen> {
               borderRadius: BorderRadius.circular(10),
               border: Border.all(color: AppColors.border),
             ),
-            child: Icon(icon, size: 18, color: AppColors.navy),
+            child: Icon(icon, size: 18, color: AppColors.textPrimary),
           ),
           const SizedBox(width: 10),
           Expanded(
@@ -340,7 +343,7 @@ class _Avatar extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
-                  color: AppColors.navy,
+                  color: AppColors.textPrimary,
                 ),
               ),
             )
@@ -381,7 +384,7 @@ class _BarberMiniCard extends StatelessWidget {
                       style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w700,
-                        color: AppColors.navy,
+                        color: AppColors.textPrimary,
                       ),
                     ),
                   )

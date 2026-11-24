@@ -324,9 +324,9 @@ class _VerifyTransactionsScreenState extends State<VerifyTransactionsScreen> {
       selected: selected,
       showCheckmark: false,
       onSelected: (_) => onTap(),
-      selectedColor: AppColors.navy,
+      selectedColor: AppColors.textPrimary,
       backgroundColor: AppColors.white,
-      side: BorderSide(color: selected ? AppColors.navy : AppColors.border),
+      side: BorderSide(color: selected ? AppColors.textPrimary : AppColors.border),
       labelStyle: TextStyle(
         fontSize: 12,
         fontWeight: FontWeight.w600,
@@ -490,16 +490,47 @@ class _TransactionCard extends StatelessWidget {
                     label: Text(context.tr('view_proof')),
                   ),
                 if (transaction.isWaiting) ...[
-                  TextButton(
-                    onPressed: onReject,
-                    style: TextButton.styleFrom(
-                      foregroundColor: AppColors.danger,
+                  SizedBox(
+                    height: 36,
+                    child: OutlinedButton(
+                      onPressed: onReject,
+                      style: OutlinedButton.styleFrom(
+                        foregroundColor: AppColors.danger,
+                        minimumSize: const Size(0, 36),
+                        padding: const EdgeInsets.symmetric(horizontal: 14),
+                        side: const BorderSide(color: AppColors.border),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        textStyle: const TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      child: Text(context.tr('reject')),
                     ),
-                    child: Text(context.tr('reject')),
                   ),
-                  TextButton(
-                    onPressed: onApprove,
-                    child: Text(context.tr('approve')),
+                  SizedBox(
+                    height: 36,
+                    child: ElevatedButton(
+                      onPressed: onApprove,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: AppColors.amber,
+                        foregroundColor: AppColors.white,
+                        elevation: 0,
+                        shadowColor: Colors.transparent,
+                        minimumSize: const Size(0, 36),
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        textStyle: const TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      child: Text(context.tr('approve')),
+                    ),
                   ),
                 ],
               ],

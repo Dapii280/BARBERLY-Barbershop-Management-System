@@ -188,7 +188,7 @@ class _BarberAdminCard extends StatelessWidget {
                       style: const TextStyle(
                         fontSize: 17,
                         fontWeight: FontWeight.w700,
-                        color: AppColors.navy,
+                        color: AppColors.textPrimary,
                       ),
                     ),
                   )
@@ -249,7 +249,7 @@ class _BarberAdminCard extends StatelessWidget {
                       icon: const Icon(
                         Icons.edit_outlined,
                         size: 18,
-                        color: AppColors.navy,
+                        color: AppColors.textPrimary,
                       ),
                     ),
                     IconButton(
@@ -681,7 +681,7 @@ class _BarberFormSheetState extends State<_BarberFormSheet> {
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
                     color: AppColors.dangerBg,
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(10),
                     border: Border.all(
                       color: AppColors.danger.withValues(alpha: 0.2),
                     ),

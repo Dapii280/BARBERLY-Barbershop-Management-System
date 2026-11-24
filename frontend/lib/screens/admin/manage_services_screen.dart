@@ -276,7 +276,7 @@ class _ServiceAdminCard extends StatelessWidget {
                       icon: const Icon(
                         Icons.edit_outlined,
                         size: 18,
-                        color: AppColors.navy,
+                        color: AppColors.textPrimary,
                       ),
                     ),
                     IconButton(
@@ -525,7 +525,7 @@ class _ServiceFormSheetState extends State<_ServiceFormSheet> {
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
                     color: AppColors.dangerBg,
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(10),
                     border: Border.all(
                       color: AppColors.danger.withValues(alpha: 0.2),
                     ),

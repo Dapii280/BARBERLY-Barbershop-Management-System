@@ -33,14 +33,14 @@ class ImagePickerBox extends StatelessWidget {
       color: Colors.transparent,
       child: InkWell(
         onTap: onTap,
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(10),
         child: Container(
           height: height,
           width: double.infinity,
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(
             color: AppColors.surface,
-            borderRadius: BorderRadius.circular(14),
+            borderRadius: BorderRadius.circular(10),
             border: Border.all(color: AppColors.border),
           ),
           child: Stack(
@@ -54,7 +54,7 @@ class ImagePickerBox extends StatelessWidget {
                   child: Container(
                     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                     decoration: BoxDecoration(
-                      color: AppColors.navy.withValues(alpha: 0.85),
+                      color: AppColors.textPrimary.withValues(alpha: 0.85),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Row(
