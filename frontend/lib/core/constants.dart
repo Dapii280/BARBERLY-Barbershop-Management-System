@@ -4,7 +4,7 @@ class AppConstants {
   // Emulator Android memakai 10.0.2.2 untuk mengakses localhost laptop.
   // Untuk produksi, ganti dengan URL backend Vercel, contoh:
   // https://barberly-api.vercel.app/api/v1
-  static const String baseUrl = 'http://localhost:5000/api/v1';
+  static const String baseUrl = 'https://barberly-barbershop-management-system-kz7trb8sr.vercel.app/api/v1';
 
   static const String appName = 'Barberly';
 
